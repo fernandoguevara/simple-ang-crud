@@ -1,0 +1,21 @@
+<mat-grid-list cols="4" rowHeight="1:1" >
+ 
+  <mat-grid-tile *ngFor="let note of notes$ | async" @fade>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{note.title}}</mat-card-title>
+        <mat-card-subtitle>{{note.id}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+        {{note.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="onEdit(note)">Edit</button>
+        <button mat-button (click)="onDelete(note)">Delete</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>

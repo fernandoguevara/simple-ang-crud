@@ -1,0 +1,8 @@
+
+
+  <h1 mat-dialog-title>WARNING!!!</h1>
+  <div mat-dialog-content>Are you sure you wanna delete {{note.id}}??? Once deleted, always gone!!!!</div>
+  <mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true">Cancel</button>
+    <button mat-button (click)="onAccept()">IM COMPLETELY SURE</button>
+  </mat-dialog-actions>

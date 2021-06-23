@@ -1,0 +1,16 @@
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+  <mat-form-field style="width: 300px;" appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput rows="10" formControlName="description"></textarea>
+  </mat-form-field>
+  <mat-dialog-actions align="end">
+    <button mat-button>Cancel</button>
+    <button type="submit" mat-button [disabled]="!noteForm.valid">Save</button>
+  </mat-dialog-actions>
+
+</form>

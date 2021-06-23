@@ -1,0 +1,19 @@
+<p>
+    <mat-toolbar color="primary">
+      
+      <button mat-icon-button>
+        <span (click)="goNotes()">Notes</span>
+      </button>
+      
+      <span class="example-spacer"></span>
+      <button (click)="onAdd()" mat-icon-button>
+        <mat-icon>add</mat-icon>
+      </button>
+      <button (click)="onLogin()" *ngIf="!(isUserLogged$ | async)">
+        <p>Login</p>
+      </button>
+      <button (click)="onLogout()" *ngIf="isUserLogged$ | async">
+        <p>Logout</p>
+      </button>
+    </mat-toolbar>
+</p>

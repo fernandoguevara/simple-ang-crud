@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { KeycloakService } from "keycloak-angular";
+import { CreateComponent } from "./modules/notes/page/notes/create/create.component";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'notes-web';
+
+  constructor(
+    
+    ){}
+
 }
